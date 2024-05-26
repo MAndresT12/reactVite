@@ -44,6 +44,9 @@ export function App(){
                 const {username, name, isFollowing} = user
                 return (
                     <TwitterFollowCard 
+                    key={username} /*Necesitamos un identificador unico
+                                    para cada elemento rendeizado, se puede usar el 
+                                    index por ejm, PERO SI bdd devuelve id podemos usar ese, o userName+avatar */
                     username={username} 
                     initialIsFollowing={isFollowing}>
                         {name} {/* Ojo porque no es pasado como prop si no como children*/}
